@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: vyapar-setu
+    ports:
+      - "8000:8000"
+    environment:
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    volumes:
+      # Persist the database and invoices outside the container
+      - ./bharat_biz.db:/app/bharat_biz.db
+      - ./invoices:/app/invoices
+    restart: unless-stopped
