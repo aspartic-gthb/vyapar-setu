@@ -37,24 +37,22 @@ Small and medium businesses (SMBs) in India face daily challenges in managing or
 
 ---
 
-## 🐳 Docker Deployment (Recommended)
+This project is containerized for easy deployment.
 
-This project includes a `Dockerfile` to verify the solution in an isolated environment.
-
-1.  **Build the Image**
-    ```bash
-    docker build -t vyapar-setu .
+1.  **Configure Environment**
+    Create a `.env` file with your bot token:
+    ```env
+    TELEGRAM_BOT_TOKEN=your_token_here
     ```
 
-2.  **Run the Container**
-    You must pass your Telegram Bot Token as an environment variable.
+2.  **Run with Docker Compose** (Recommended)
     ```bash
-    docker run -p 8000:8000 -e TELEGRAM_BOT_TOKEN="your_token_here" vyapar-setu
+    docker compose up --build
     ```
 
 3.  **Access App**
     -   Dashboard: `http://localhost:8000/dashboard`
-    -   Telegram Bot: Active immediately.
+    -   Bot: Active immediately.
 
 ---
 
