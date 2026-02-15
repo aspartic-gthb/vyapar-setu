@@ -1,9 +1,9 @@
 from fastapi import FastAPI
+from fastapi.responses import HTMLResponse, RedirectResponse
 from pydantic import BaseModel
 import re
 import uuid
 import os
-from fastapi.responses import HTMLResponse
 import uvicorn
 
 from reportlab.lib.pagesizes import A4
@@ -47,6 +47,10 @@ def detect_intent(message: str):
             if word in message:
                 return intent
     return "UNKNOWN"
+
+@app.get("/", include_in_schema=False)
+def root():
+    return RedirectResponse(url="/dashboard")
 
 # ---------------- HEALTH CHECK ----------------
 @app.get("/health")
