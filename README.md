@@ -60,7 +60,7 @@ This project is containerized for easy deployment.
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/your-username/vyapar-setu.git
+    git clone https://github.com/aspartic-gthb/vyapar-setu.git
     cd vyapar-setu
     ```
 
