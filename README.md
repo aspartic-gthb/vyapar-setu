@@ -1,4 +1,4 @@
-# 🇮🇳 Vyapar Setu (Bharat Biz Agent)
+# Vyapar Setu (Bharat Biz Agent)
 
 **The AI-Powered Business Assistant for India's 60M+ SMBs**
 
